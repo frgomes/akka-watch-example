@@ -6,7 +6,7 @@ import com.typesafe.config.ConfigFactory
 
 class Supervisor extends Actor {
   def receive: Receive = {
-    case msg @ Terminated( actor) =>
+    case msg @ Terminated(actor) =>
       println(s"TERMINATED:: ${actor}")
 
     case msg @ _ =>
