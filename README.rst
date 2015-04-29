@@ -19,11 +19,11 @@ For the impatient
 
 2. In a separate terminal, run the Supervisor
 
-    $ echo 2 | sbt run
+    $ sbt runMain actors.Supervisor
 
 3. In a separate terminal, run the Client
 
-    $ echo 1 | sbt run
+    $ sbt runMain actors.Client
 
 4. Press ctrl-C after the Client starts and prints the message that comes from the Supervisor.
 
