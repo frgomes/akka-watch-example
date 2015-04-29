@@ -7,7 +7,7 @@ This is a simple example application which has:
 
 2. a Supervisor which just responds to the Client actor and starts watching it
 
-3. when the Client actor dies, the Supervisor actor prints a message onto the standard output.
+When the Client actor dies, the Supervisor actor prints a message onto the standard output.
 
 
 For the impatient
