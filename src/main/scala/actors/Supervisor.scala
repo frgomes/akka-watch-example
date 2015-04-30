@@ -11,11 +11,11 @@ class Supervisor(another: ActorRef) extends Actor {
 
   def receive: Receive = {
     case msg @ Terminated(actor) =>
-      println(s"TERMINATED:: ${actor}")
+      println(s"++++++++++ TERMINATED:: ${actor}")
       another forward Encapsulated(msg)
     case msg @ _ =>
       context.watch(sender)
-      println(s"WATCH:: ${sender} : ${msg}")
+      println(s"++++++++++ WATCH:: ${sender} : ${msg}")
       sender ! "Supervisor is now watching you."
   }
 }
@@ -23,9 +23,9 @@ class Supervisor(another: ActorRef) extends Actor {
 class AnotherSupervisor extends Actor {
   def receive: Receive = {
     case msg @ Encapsulated(Terminated(actor)) =>
-      println(s"ENCAPSULATED TERMINATED :: ${actor}")
+      println(s"++++++++++ ENCAPSULATED TERMINATED :: ${actor}")
     case msg @ _ =>
-      println(s"MESSAGE:: ${sender} : ${msg}")
+      println(msg)
   }
 }
 
