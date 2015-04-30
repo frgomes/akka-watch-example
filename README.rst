@@ -19,12 +19,12 @@ For the impatient
 
 2. In a separate terminal, run the Supervisor
 
-    $ sbt runMain actors.Supervisor
+    $ sbt 'runMain actors.Supervisor'
 
 3. In a separate terminal, run the Client
 
-    $ sbt runMain actors.Client
+    $ sbt 'runMain actors.Client'
 
-4. Press ctrl-C after the Client starts and prints the message that comes from the Supervisor.
+4. Press Ctrl-C after the Client starts and prints the message that comes from the Supervisor.
 
 5. Go to the Supervisor terminal and observe the arrival of the Terminated message.
